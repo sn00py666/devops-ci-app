@@ -1,0 +1,5 @@
+**
+!app/
+!app/__init__.py
+!app/app.py
+!app/requirements.txt
