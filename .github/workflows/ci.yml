@@ -118,5 +118,5 @@ jobs:
       - name: Push image
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          docker push "${IMAGE_NAME}:${GITHUB_SHA}"
-          docker push "${IMAGE_NAME}:latest"
+          docker push --platform linux/amd64 "${IMAGE_NAME}:latest"
+          docker push --platform linux/amd64 "${IMAGE_NAME}:${GITHUB_SHA}"
